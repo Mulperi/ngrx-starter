@@ -9,6 +9,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 import { reducers } from './store';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
+import { AuthStoreModule } from './store/auth/auth-store.module';
 
 @NgModule({
   declarations: [AppContainerComponent],
@@ -17,7 +18,8 @@ import { StoreRouterConnectingModule } from '@ngrx/router-store';
     AppRoutingModule,
     StoreModule.forRoot(reducers),
     StoreDevtoolsModule.instrument(),
-    StoreRouterConnectingModule.forRoot({})
+    StoreRouterConnectingModule.forRoot({}),
+    AuthStoreModule
   ],
   providers: [],
   bootstrap: [AppContainerComponent]
