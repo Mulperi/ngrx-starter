@@ -1,9 +1,16 @@
 import { Params } from '@angular/router';
 
-import { createFeatureSelector, ActionReducerMap } from '@ngrx/store';
+import {
+  createFeatureSelector,
+  ActionReducerMap,
+  MetaReducer
+} from '@ngrx/store';
 import { routerReducer, RouterReducerState } from '@ngrx/router-store';
 
+import { storeFreeze } from 'ngrx-store-freeze';
+
 import * as fromAuth from './auth.reducer';
+import { environment } from 'src/environments/environment';
 
 export interface RouterStateUrl {
   url: string;
@@ -21,4 +28,11 @@ export const reducers: ActionReducerMap<State> = {
   auth: fromAuth.reducer
 };
 
-export const getState = createFeatureSelector<State>('root');
+/*
+  Store freeze makes sure you don't accidentally mutate the state
+*/
+export const metaReducers: MetaReducer<State>[] = !environment.production
+  ? [storeFreeze]
+  : [];
+
+export const getAuthState = createFeatureSelector<fromAuth.State>('auth');

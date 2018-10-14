@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import * as fromFeature from '../../store';
 import * as fromRoot from '../../../root/store';
+import * as authActions from '../../../root/store/actions/auth.actions';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -24,10 +25,9 @@ export class Feature2TestContainerComponent implements OnInit {
     this.featureStore.select(fromFeature.getData).subscribe(data => {
       console.log('Feature 2 data: ' + data);
     });
+  }
 
-    // this.store.select(fromAuth.getAuthenticated).subscribe(authenticated => {
-    //   console.log('Authenticated: ' + authenticated);
-    //   this.authenticated = authenticated;
-    // });
+  onAuthenticateClick() {
+    this.rootStore.dispatch(new authActions.AuthAuthenticate());
   }
 }
