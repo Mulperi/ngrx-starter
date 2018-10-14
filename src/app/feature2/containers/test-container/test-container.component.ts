@@ -11,15 +11,18 @@ import { Observable } from 'rxjs';
   styleUrls: ['./test-container.component.scss']
 })
 export class Feature2TestContainerComponent implements OnInit {
-  authenticated: Observable<boolean> = this.store.select(
+  authenticated: Observable<boolean> = this.rootStore.select(
     fromRoot.getAuthenticated
   );
 
-  constructor(private store: Store<fromFeature.State>) {}
+  constructor(
+    private featureStore: Store<fromFeature.State>,
+    private rootStore: Store<fromRoot.State>
+  ) {}
 
   ngOnInit() {
-    this.store.select(fromFeature.getData).subscribe(data => {
-      console.log('Feature 2 data : ' + data);
+    this.featureStore.select(fromFeature.getData).subscribe(data => {
+      console.log('Feature 2 data: ' + data);
     });
 
     // this.store.select(fromAuth.getAuthenticated).subscribe(authenticated => {

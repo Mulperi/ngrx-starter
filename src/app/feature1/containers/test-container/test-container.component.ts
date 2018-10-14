@@ -13,7 +13,7 @@ export class Feature1TestContainerComponent implements OnInit {
 
   ngOnInit() {
     this.store.select(fromFeature.getData).subscribe(data => {
-      console.log(data);
+      console.log('Feature 1 data: ' + data);
     });
   }
 }
