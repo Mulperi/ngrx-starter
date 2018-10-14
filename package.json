@@ -26,7 +26,8 @@
     "@ngrx/store-devtools": "^6.1.0",
     "core-js": "^2.5.4",
     "rxjs": "^6.0.0",
-    "zone.js": "~0.8.26"
+    "zone.js": "~0.8.26",
+    "example-ng6-lib": "file:./example-ng6-lib-0.0.1.tgz"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.7.0",
