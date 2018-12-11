@@ -1,16 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppContainerComponent } from './root/containers/app-container/app-container.component';
-import { AppRoutingModule } from './app-routing.module';
+import { AppContainerComponent } from '../root/containers/app-container/app-container.component';
+import { AppRoutingModule } from './root-routing.module';
 import { StoreModule } from '@ngrx/store';
 
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
-import { reducers, metaReducers } from './root/store';
+import { reducers, metaReducers } from './store';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { EffectsModule } from '@ngrx/effects';
-import { effects } from './root/store/effects';
+import { effects } from './store/effects';
 
 @NgModule({
   declarations: [AppContainerComponent],
@@ -25,4 +25,4 @@ import { effects } from './root/store/effects';
   providers: [],
   bootstrap: [AppContainerComponent]
 })
-export class AppModule {}
+export class RootModule {}

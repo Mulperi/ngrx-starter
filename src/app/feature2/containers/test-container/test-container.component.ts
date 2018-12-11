@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import * as fromFeature from '../../store';
 import * as fromRoot from '../../../root/store';
-import * as authActions from '../../../root/store/actions/auth.actions';
+import * as authAction from '../../../root/store/actions/auth.actions';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -28,6 +28,6 @@ export class Feature2TestContainerComponent implements OnInit {
   }
 
   onAuthenticateClick() {
-    this.rootStore.dispatch(new authActions.AuthAuthenticate());
+    this.rootStore.dispatch(new authAction.AuthAuthenticate());
   }
 }
