@@ -1,11 +1,10 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { RouterModule, Routes } from '@angular/router';
 import { Feature1TestContainerComponent } from './containers/test-container/test-container.component';
 
 // import * as fromComponents from './components';
-import * as fromContainers from './containers';
+// import * as fromContainers from './containers';
 
 const routes: Routes = [
   {
@@ -17,7 +16,6 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [...fromContainers.containers],
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })

@@ -1,0 +1,27 @@
+.active {
+  color: green;
+}
+
+mat-toolbar-row {
+  display: flex;
+  justify-content: space-between;
+
+  a {
+    color: white;
+  }
+}
+
+mat-toolbar-row > section {
+  display: flex;
+}
+
+section > div {
+  margin-right: 2rem;
+}
+section > div:last-child {
+  margin-right: 0;
+}
+
+main {
+  padding: 1rem;
+}
