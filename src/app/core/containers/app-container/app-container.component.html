@@ -1,20 +1,32 @@
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <section><span>NGRX Starter by Mulperi</span></section>
-
-    <section>
-      <div>
-        <a routerLink="/feature1" routerLinkActive="active"
-          ><button mat-raised-button>FEATURE1</button></a
-        >
-      </div>
-      <div>
-        <a routerLink="/feature2" routerLinkActive="active"
-          ><button mat-raised-button>FEATURE2</button></a
-        >
-      </div>
+<mat-sidenav-container>
+  <mat-sidenav mode="side" opened="false">
+    <section class="sidenav">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe cupiditate
+      neque, eos aliquam libero corrupti nam vitae eum placeat quibusdam numquam
+      accusantium pariatur atque dicta blanditiis praesentium quia adipisci
+      eaque.
     </section>
-  </mat-toolbar-row>
-</mat-toolbar>
+  </mat-sidenav>
 
-<main><router-outlet></router-outlet></main>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <section><span>NGRX Starter by Mulperi</span></section>
+
+        <section>
+          <div>
+            <a routerLink="/feature1" routerLinkActive="active"
+              ><button mat-raised-button>FEATURE1</button></a
+            >
+          </div>
+          <div>
+            <a routerLink="/feature2" routerLinkActive="active"
+              ><button mat-raised-button>FEATURE2</button></a
+            >
+          </div>
+        </section>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <main><router-outlet></router-outlet></main>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -15,6 +15,11 @@ mat-toolbar-row > section {
   display: flex;
 }
 
+section.sidenav {
+  max-width: 300px;
+  padding: 1rem;
+}
+
 section > div {
   margin-right: 2rem;
 }
