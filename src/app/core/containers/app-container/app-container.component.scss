@@ -1,3 +1,19 @@
+mat-sidenav-content {
+  background: whitesmoke;
+}
+
+mat-sidenav-container {
+  height: 100%;
+}
+
+mat-sidenav {
+  background: rgb(253, 255, 227);
+}
+
+mat-icon {
+  cursor: pointer;
+}
+
 .active {
   color: green;
 }

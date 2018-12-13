@@ -1,6 +1,11 @@
 <mat-sidenav-container>
-  <mat-sidenav mode="side" opened="false">
+  <mat-sidenav
+    class="mat-elevation-z4"
+    mode="side"
+    [opened]="sideviewVisible$ | async"
+  >
     <section class="sidenav">
+      <div><mat-icon (click)="hideSideview()">close</mat-icon></div>
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe cupiditate
       neque, eos aliquam libero corrupti nam vitae eum placeat quibusdam numquam
       accusantium pariatur atque dicta blanditiis praesentium quia adipisci
